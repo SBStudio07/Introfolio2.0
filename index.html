@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suman OS // Suman Bhattacharya</title>
+  <meta name="description" content="A student who somehow turned curiosity, late-night debugging and random ideas into a developer journey." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Lucide icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+<body>
+  <!-- Subtle grid + ambient glow -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- ========== TOP BAR ========== -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-icon"><i data-lucide="terminal"></i></span>
+        <span class="logo-text">SUMAN<span class="accent">.OS</span></span>
+      </a>
+
+      <nav class="nav" id="main-nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#timeline" class="nav-link">Timeline</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#commits" class="nav-link">Commits</a>
+        <a href="#processes" class="nav-link">Status</a>
+        <a href="#next" class="nav-link">Roadmap</a>
+        <a href="#contact" class="nav-link">Connect</a>
+      </nav>
+
+      <div class="topbar-meta">
+        <span class="status-pill">
+          <span class="status-dot"></span>
+          SYSTEM ONLINE
+        </span>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <i data-lucide="moon"></i>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="section hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-row">
+            <span class="badge">
+              <i data-lucide="cpu"></i>
+              DEVELOPER PROFILE LOADED
+            </span>
+            <span class="badge badge-soft">
+              <i data-lucide="map-pin"></i>
+              v1.0.0
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">SUMAN</span>
+            <span class="title-line gradient-text">BHATTACHARYA</span>
+          </h1>
+
+          <p class="hero-tagline">
+            A student who somehow turned curiosity, late-night debugging and random ideas into a developer journey.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#timeline" class="btn btn-primary">
+              <i data-lucide="play"></i>
+              ./explore_life
+            </a>
+            <a href="#projects" class="btn btn-ghost">
+              <i data-lucide="folder-code"></i>
+              View projects
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">6+</span>
+              <span class="stat-label">Years coding</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">4</span>
+              <span class="stat-label">Shipped projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">∞</span>
+              <span class="stat-label">Ideas pending</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="traffic">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">suman@os:~</span>
+              <span class="terminal-badge">LIVE</span>
+            </div>
+            <div class="terminal-body" id="hero-terminal">
+              <div class="term-line"><span class="prompt">$</span> whoami</div>
+              <div class="term-line output">Suman Bhattacharya</div>
+              <div class="term-line"><span class="prompt">$</span> cat ./current_state.txt</div>
+              <div class="term-line output">learning + building</div>
+              <div class="term-line"><span class="prompt">$</span> uptime</div>
+              <div class="term-line output">booted 2008 · active 2026</div>
+              <div class="term-line"><span class="prompt">$</span> <span class="cursor-blink">█</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-id">01</span>
+          <h2 class="section-title">
+            <i data-lucide="code-2"></i>
+            About the developer
+          </h2>
+          <p class="section-sub">cat ./about/developer.md</p>
+        </div>
+
+        <div class="about-layout">
+          <div class="code-window">
+            <div class="code-header">
+              <div class="traffic">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="code-filename">
+                <i data-lucide="file-code"></i>
+                curiosity.js
+              </span>
+              <span class="code-lang">JS</span>
+            </div>
+            <pre class="code-body"><code><span class="cmt">// Encode curiosity.js</span>
+<span class="kw">int</span> <span class="fn">main</span>() {
+  <span class="kw">char</span>* name = <span class="str">"Suman Bhattacharya"</span>;
+  <span class="kw">char</span>* current_state =
+    <span class="str">"learning + building"</span>;
+
+  <span class="kw">while</span> (curious) {
+    learn();
+    build();
+    break_things();
+    fix_them();
+    repeat();
+  }
+
+  <span class="cmt">// somehow this became a career plan</span>
+  <span class="kw">return</span> 0; <span class="cmt">// success</span>
+}</code></pre>
+          </div>
+
+          <div class="about-cards">
+            <div class="info-card">
+              <div class="info-icon"><i data-lucide="brain"></i></div>
+              <h3>Mindset</h3>
+              <p>Curiosity first. Break things, then understand why they broke.</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i data-lucide="moon"></i></div>
+              <h3>Mode</h3>
+              <p>Late-night debugging is a feature, not a bug.</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i data-lucide="sparkles"></i></div>
+              <h3>Fuel</h3>
+              <p>Random ideas that refuse to stay ideas for long.</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i data-lucide="rocket"></i></div>
+              <h3>Direction</h3>
+              <p>Connecting DSA, Web &amp; AI into real systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TIMELINE ========== -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-id">02</span>
+          <h2 class="section-title">
+            <i data-lucide="git-branch"></i>
+            Life timeline
+          </h2>
+          <p class="section-sub">git log --life</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-track"></div>
+
+          <article class="timeline-item" data-year="2008">
+            <div class="timeline-marker">
+              <i data-lucide="power"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="year">2008</span>
+                <span class="tag tag-boot">BOOT</span>
+              </div>
+              <h3>System initialized</h3>
+              <p>Suman enters the world. The debugging begins later.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-year="2018">
+            <div class="timeline-marker">
+              <i data-lucide="monitor"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="year">2018</span>
+                <span class="tag tag-discover">DISCOVER</span>
+              </div>
+              <h3>First encounters with technology</h3>
+              <p>Computers stopped being mysterious and started being tools.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-year="2021">
+            <div class="timeline-marker">
+              <i data-lucide="code"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="year">2021</span>
+                <span class="tag tag-start">START</span>
+              </div>
+              <h3>Started coding seriously</h3>
+              <p>HTML, CSS, JavaScript and the wonderful world of broken code.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-year="2023">
+            <div class="timeline-marker">
+              <i data-lucide="folder-git-2"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="year">2023</span>
+                <span class="tag tag-build">BUILD</span>
+              </div>
+              <h3>Projects started appearing</h3>
+              <p>Clones, experiments, Python scripts, games and increasingly ambitious ideas.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-year="2025">
+            <div class="timeline-marker">
+              <i data-lucide="layers"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="year">2025</span>
+                <span class="tag tag-expand">EXPAND</span>
+              </div>
+              <h3>DSA + Web + AI</h3>
+              <p>Started connecting different areas of development instead of learning everything separately.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-year="2026">
+            <div class="timeline-marker current">
+              <i data-lucide="zap"></i>
+            </div>
+            <div class="timeline-card highlight">
+              <div class="timeline-meta">
+                <span class="year">2026</span>
+                <span class="tag tag-current">CURRENT FOCUS</span>
+              </div>
+              <h3>Building the next version</h3>
+              <p>DSA, Web &amp; backend development, AI/ML, open source and bigger projects.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-id">03</span>
+          <h2 class="section-title">
+            <i data-lucide="network"></i>
+            Skill tree
+          </h2>
+          <p class="section-sub">./skills --scan</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Languages -->
+          <div class="skill-panel">
+            <div class="skill-panel-header">
+              <div class="skill-panel-icon"><i data-lucide="braces"></i></div>
+              <div>
+                <h3>Languages</h3>
+                <span class="skill-count">4 active</span>
+              </div>
+            </div>
+            <div class="skill-list">
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="file-code-2"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="85" style="--level: 85%"></div>
+                </div>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="file-code-2"></i>
+                  <span>Python</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="70" style="--level: 70%"></div>
+                </div>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="file-code-2"></i>
+                  <span>HTML / CSS</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="90" style="--level: 90%"></div>
+                </div>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="file-code-2"></i>
+                  <span>C / C++</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="55" style="--level: 55%"></div>
+                </div>
+                <span class="skill-pct">55%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web -->
+          <div class="skill-panel">
+            <div class="skill-panel-header">
+              <div class="skill-panel-icon"><i data-lucide="globe"></i></div>
+              <div>
+                <h3>Web</h3>
+                <span class="skill-count">4 active</span>
+              </div>
+            </div>
+            <div class="skill-list">
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="atom"></i>
+                  <span>React</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="75" style="--level: 75%"></div>
+                </div>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="server"></i>
+                  <span>Node.js</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="65" style="--level: 65%"></div>
+                </div>
+                <span class="skill-pct">65%</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="database"></i>
+                  <span>SQL / Mongo</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="60" style="--level: 60%"></div>
+                </div>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="layout"></i>
+                  <span>UI / UX basics</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="70" style="--level: 70%"></div>
+                </div>
+                <span class="skill-pct">70%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-panel">
+            <div class="skill-panel-header">
+              <div class="skill-panel-icon"><i data-lucide="wrench"></i></div>
+              <div>
+                <h3>Tools</h3>
+                <span class="skill-count">4 active</span>
+              </div>
+            </div>
+            <div class="skill-list">
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="git-branch"></i>
+                  <span>Git / GitHub</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="80" style="--level: 80%"></div>
+                </div>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="terminal"></i>
+                  <span>VS Code</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="90" style="--level: 90%"></div>
+                </div>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="package"></i>
+                  <span>npm / packages</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="70" style="--level: 70%"></div>
+                </div>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <i data-lucide="hard-drive"></i>
+                  <span>Linux / Terminal</span>
+                </div>
+                <div class="skill-bar-wrap">
+                  <div class="skill-bar" data-level="65" style="--level: 65%"></div>
+                </div>
+                <span class="skill-pct">65%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-id">04</span>
+          <h2 class="section-title">
+            <i data-lucide="boxes"></i>
+            Things I built
+          </h2>
+          <p class="section-sub">ls -la /projects</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon weather"><i data-lucide="cloud-sun"></i></div>
+              <span class="project-status status-active">ACTIVE</span>
+            </div>
+            <h3>WeatherGPT</h3>
+            <p>Conversational AI weather platform designed around forecasts, alerts, climate information and location-based advisories.</p>
+            <div class="project-tags">
+              <span class="tag">AI</span>
+              <span class="tag">API</span>
+              <span class="tag">Web</span>
+              <span class="tag">NLP</span>
+              <span class="tag">React</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> Demo</a>
+              <a href="#" class="project-link"><i data-lucide="github"></i> Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon jee"><i data-lucide="book-open"></i></div>
+              <span class="project-status status-built">BUILT</span>
+            </div>
+            <h3>JEE PYQs</h3>
+            <p>Practice platform for JEE questions with scoring, navigation, timer tools and performance tracking.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">JS</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Logic</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> Demo</a>
+              <a href="#" class="project-link"><i data-lucide="github"></i> Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon amazon"><i data-lucide="shopping-cart"></i></div>
+              <span class="project-status status-built">BUILT</span>
+            </div>
+            <h3>Amazon Clone</h3>
+            <p>Frontend recreation built to understand layouts, components, responsive design and real-world UI patterns.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+              <span class="tag">UI</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> Demo</a>
+              <a href="#" class="project-link"><i data-lucide="github"></i> Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon roblox"><i data-lucide="gamepad-2"></i></div>
+              <span class="project-status status-experiment">EXPERIMENT</span>
+            </div>
+            <h3>Roblox Projects</h3>
+            <p>Obby games, zombie fighting experiments and other attempts at turning random ideas into playable things.</p>
+            <div class="project-tags">
+              <span class="tag">Lua</span>
+              <span class="tag">Game Dev</span>
+              <span class="tag">3D</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> Play</a>
+              <a href="#" class="project-link"><i data-lucide="github"></i> Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COMMIT HISTORY ========== -->
+    <section class="section" id="commits">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-id">05</span>
+          <h2 class="section-title">
+            <i data-lucide="git-commit"></i>
+            Commit history
+          </h2>
+          <p class="section-sub">git log --oneline</p>
+        </div>
+
+        <div class="commit-window">
+          <div class="commit-header">
+            <div class="traffic">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="commit-title">
+              <i data-lucide="git-branch"></i>
+              main · recent commits
+            </span>
+          </div>
+          <ul class="commit-list">
+            <li class="commit-item">
+              <span class="commit-hash">a87c2f2</span>
+              <span class="commit-msg">started building instead of watching tutorials</span>
+              <span class="commit-time">2y ago</span>
+            </li>
+            <li class="commit-item">
+              <span class="commit-hash">7d8b3e4</span>
+              <span class="commit-msg">built first serious frontend project</span>
+              <span class="commit-time">1y ago</span>
+            </li>
+            <li class="commit-item">
+              <span class="commit-hash">c29af12</span>
+              <span class="commit-msg">added Python to the toolbox</span>
+              <span class="commit-time">10mo</span>
+            </li>
+            <li class="commit-item">
+              <span class="commit-hash">e91fe32</span>
+              <span class="commit-msg">entered the side arc</span>
+              <span class="commit-time">8mo</span>
+            </li>
+            <li class="commit-item">
+              <span class="commit-hash">f74aa15</span>
+              <span class="commit-msg">started building WeatherGPT</span>
+              <span class="commit-time">4mo</span>
+            </li>
+            <li class="commit-item current">
+              <span class="commit-hash">HEAD</span>
+              <span class="commit-msg">still figuring everything out…</span>
+              <span class="commit-time">now</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CURRENT PROCESSES ========== -->
+    <section class="section" id="processes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-id">06</span>
+          <h2 class="section-title">
+            <i data-lucide="activity"></i>
+            Current processes
+          </h2>
+          <p class="section-sub">ps aux --current</p>
+        </div>
+
+        <div class="process-list">
+          <div class="process-row">
+            <div class="process-info">
+              <span class="process-pid">PID 102</span>
+              <span class="process-name">WEB DEVELOPMENT</span>
+            </div>
+            <div class="process-bar-wrap">
+              <div class="process-bar" style="--level: 78%"></div>
+            </div>
+            <span class="process-status running">RUNNING</span>
+          </div>
+          <div class="process-row">
+            <div class="process-info">
+              <span class="process-pid">PID 205</span>
+              <span class="process-name">DSA + PROBS</span>
+            </div>
+            <div class="process-bar-wrap">
+              <div class="process-bar" style="--level: 62%"></div>
+            </div>
+            <span class="process-status learning">LEARNING</span>
+          </div>
+          <div class="process-row">
+            <div class="process-info">
+              <span class="process-pid">PID 318</span>
+              <span class="process-name">AI / ML</span>
+            </div>
+            <div class="process-bar-wrap">
+              <div class="process-bar" style="--level: 45%"></div>
+            </div>
+            <span class="process-status exploring">EXPLORING</span>
+          </div>
+          <div class="process-row">
+            <div class="process-info">
+              <span class="process-pid">PID 441</span>
+              <span class="process-name">OPEN SOURCE</span>
+            </div>
+            <div class="process-bar-wrap">
+              <div class="process-bar" style="--level: 28%"></div>
+            </div>
+            <span class="process-status initializing">INITIALIZING</span>
+          </div>
+          <div class="process-row">
+            <div class="process-info">
+              <span class="process-pid">PID 999</span>
+              <span class="process-name">SLEEP</span>
+            </div>
+            <div class="process-bar-wrap">
+              <div class="process-bar critical" style="--level: 12%"></div>
+            </div>
+            <span class="process-status critical">CRITICAL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIMENTAL FILESYSTEM ========== -->
+    <section class="section" id="filesystem">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-id">07</span>
+          <h2 class="section-title">
+            <i data-lucide="folder-tree"></i>
+            Experimental filesystem
+          </h2>
+          <p class="section-sub">find /experiments -type f</p>
+        </div>
+
+        <div class="fs-grid">
+          <div class="fs-item">
+            <i data-lucide="folder"></i>
+            <span class="fs-name">/random_ideas/</span>
+            <span class="fs-meta">dir</span>
+          </div>
+          <div class="fs-item">
+            <i data-lucide="file-text"></i>
+            <span class="fs-name">late_night_projects/</span>
+            <span class="fs-meta">dir</span>
+          </div>
+          <div class="fs-item">
+            <i data-lucide="folder"></i>
+            <span class="fs-name">things_that_might_work/</span>
+            <span class="fs-meta">dir</span>
+          </div>
+          <div class="fs-item">
+            <i data-lucide="file-code"></i>
+            <span class="fs-name">unfinished_projects.md</span>
+            <span class="fs-meta">file</span>
+          </div>
+          <div class="fs-item">
+            <i data-lucide="file-warning"></i>
+            <span class="fs-name">why_is_this_broken.txt</span>
+            <span class="fs-meta">file</span>
+          </div>
+          <div class="fs-item">
+            <i data-lucide="file"></i>
+            <span class="fs-name">ideas_on_the_bus.txt</span>
+            <span class="fs-meta">file</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHAT'S NEXT ========== -->
+    <section class="section" id="next">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-id">08</span>
+          <h2 class="section-title">
+            <i data-lucide="map"></i>
+            What's next
+          </h2>
+          <p class="section-sub">cat /future/roadmap</p>
+        </div>
+
+        <div class="roadmap-window">
+          <div class="roadmap-header">
+            <div class="traffic">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="roadmap-title">
+              <i data-lucide="list-todo"></i>
+              roadmap.md
+            </span>
+          </div>
+          <ul class="roadmap-list">
+            <li class="roadmap-item done">
+              <span class="check"><i data-lucide="check"></i></span>
+              <span class="roadmap-text">Learn the fundamentals</span>
+            </li>
+            <li class="roadmap-item done">
+              <span class="check"><i data-lucide="check"></i></span>
+              <span class="roadmap-text">Build real projects</span>
+            </li>
+            <li class="roadmap-item active">
+              <span class="check"><i data-lucide="circle"></i></span>
+              <span class="roadmap-text">Master DSA</span>
+            </li>
+            <li class="roadmap-item">
+              <span class="check"><i data-lucide="circle"></i></span>
+              <span class="roadmap-text">Become comfortable with React</span>
+            </li>
+            <li class="roadmap-item">
+              <span class="check"><i data-lucide="circle"></i></span>
+              <span class="roadmap-text">Build full-stack applications</span>
+            </li>
+            <li class="roadmap-item">
+              <span class="check"><i data-lucide="circle"></i></span>
+              <span class="roadmap-text">Explore AI / ML seriously</span>
+            </li>
+            <li class="roadmap-item">
+              <span class="check"><i data-lucide="circle"></i></span>
+              <span class="roadmap-text">Contribute to open source</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-id">09</span>
+          <h2 class="section-title">
+            <i data-lucide="radio"></i>
+            Establish connection
+          </h2>
+          <p class="section-sub">ssh //connect</p>
+        </div>
+
+        <div class="contact-grid">
+          <a href="https://github.com" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon"><i data-lucide="github"></i></div>
+            <div class="contact-body">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">@suman</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="contact-arrow"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon"><i data-lucide="linkedin"></i></div>
+            <div class="contact-body">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">Suman Bhattacharya</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="contact-arrow"></i>
+          </a>
+          <a href="mailto:hello@example.com" class="contact-card">
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
+            <div class="contact-body">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">Drop a message</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="contact-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER TERMINAL ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-terminal">
+        <div class="footer-term-header">
+          <div class="traffic">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="footer-term-title">suman@os:~</span>
+        </div>
+        <div class="footer-term-body">
+          <div class="term-line"><span class="prompt">suman@os:~$</span> echo <span class="str">"still building…"</span></div>
+          <div class="term-line output">still building…</div>
+          <div class="term-line"><span class="prompt">suman@os:~$</span> <span class="cursor-blink">█</span></div>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Suman Bhattacharya</span>
+        <span class="sep">·</span>
+        <span>Built with curiosity</span>
+        <span class="sep">·</span>
+        <span>Suman OS v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
